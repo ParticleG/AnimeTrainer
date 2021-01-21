@@ -26,10 +26,7 @@ async def image(session: CommandSession):
                     file_names = []
                     for parent_dir, sub_dirs, filenames in os.walk(PATHS['IMAGE_PATH']):
                         file_names = filenames
-                        for filename in filenames:
-                            print(f'Parent: {parent_dir}')
-                            print(f'Filename: {filename}')
-                            print(f'Full path: {os.path.join(parent_dir, filename)}')
+                        print(filenames)
 
                     index = random.randint(0, len(file_names) - 1)
                     response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_names[index]))}'
