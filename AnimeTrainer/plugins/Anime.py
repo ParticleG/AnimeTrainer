@@ -23,13 +23,14 @@ async def image(session: CommandSession):
         try:
             for temp_group in GROUPS:
                 if session.event.group_id == temp_group['group']:
-                    file_names = []
-                    for parent_dir, sub_dirs, filenames in os.walk(PATHS['IMAGE_PATH']):
-                        file_names += filenames
+                    file_paths = []
+                    for parent_dir, sub_dirs, file_names in os.walk(PATHS['IMAGE_PATH']):
+                        for file_name in file_names:
+                            file_paths.append(os.path.join(parent_dir, file_name))
 
-                    index = random.randint(0, len(file_names) - 1)
-                    print(os.path.join(PATHS["IMAGE_PATH"], file_names[index]))
-                    response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_names[index]))}'
+                    index = random.randint(0, len(file_paths) - 1)
+                    print(os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))
+                    response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))}'
                     break
             else:
                 response = '本群没有开启涩图功能，请联系管理员开启'
