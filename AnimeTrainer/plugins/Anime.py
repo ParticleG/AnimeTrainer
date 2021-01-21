@@ -8,8 +8,8 @@ from AnimeTrainer.utils.cq_parser import *
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-import base64
-import io
+import random
+import os
 
 
 @on_command('image',
@@ -23,7 +23,16 @@ async def image(session: CommandSession):
         try:
             for temp_group in GROUPS:
                 if session.event.group_id == temp_group['group']:
-                    response = f'{cq_image_parser()}你没有今日CP，快和{temp_group["nickname"]}贴贴去吧！'
+                    file_names = []
+                    for parent_dir, sub_dirs, filenames in os.walk(PATHS['IMAGE_PATH']):
+                        file_names = filenames
+                        for filename in filenames:
+                            print(f'Parent: {parent_dir}')
+                            print(f'Filename: {filename}')
+                            print(f'Full path: {os.path.join(parent_dir, filename)}')
+
+                    index = random.randint(0, len(file_names) - 1)
+                    response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_names[index]))}'
                     break
             else:
                 response = '本群没有开启涩图功能，请联系管理员开启'
