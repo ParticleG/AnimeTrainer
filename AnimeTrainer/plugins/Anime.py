@@ -29,7 +29,7 @@ async def image(session: CommandSession):
                             file_paths.append(os.path.join(parent_dir, file_name))
 
                     index = random.randint(0, len(file_paths) - 1)
-                    print(os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))
+                    print(cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_paths[index])))
                     response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))}'
                     break
             else:
