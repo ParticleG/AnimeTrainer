@@ -30,7 +30,7 @@ async def image(session: CommandSession):
 
                     index = random.randint(0, len(file_paths) - 1)
                     print(cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_paths[index])))
-                    response = f'{cq_image_parser(os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))}'
+                    response = f'{cq_image_parser("file:///" + os.path.join(PATHS["IMAGE_PATH"], file_paths[index]))}'
                     break
             else:
                 response = '本群没有开启涩图功能，请联系管理员开启'
