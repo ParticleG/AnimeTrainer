@@ -25,7 +25,7 @@ async def image(session: CommandSession):
                 if session.event.group_id == temp_group['group']:
                     file_names = []
                     for parent_dir, sub_dirs, filenames in os.walk(PATHS['IMAGE_PATH']):
-                        file_names = filenames
+                        file_names += filenames
                         print(filenames)
 
                     index = random.randint(0, len(file_names) - 1)
