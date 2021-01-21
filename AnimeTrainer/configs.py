@@ -1,7 +1,7 @@
 PATHS = {
-    'CQ_PATH': 'C:/Public/AnimeTrainer/Server/',
-    'BOT_PATH': 'C:/Public/AnimeTrainer/Bot/',
-    'IMAGE_PATH': 'C:/SeTuExploreAssociate/',
+    'CQ_PATH': 'C:\\Public\\AnimeTrainer\\Server\\',
+    'BOT_PATH': 'C:\\Public\\AnimeTrainer\\Bot\\',
+    'IMAGE_PATH': 'C:\\SeTuExploreAssociate\\',
 }
 
 GROUPS = [
