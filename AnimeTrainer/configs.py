@@ -13,10 +13,10 @@ GROUPS = [
         'nickname': '其他',
     },
     {
-        'id': 'STEA',
-        'group': 628669530,
+        'id': 'SETU',
+        'group': 1047954599,
         'type': 'code',
-        'name': 'STEA总群',
-        'nickname': 'STEA',
+        'name': 'SETU群',
+        'nickname': 'SETU',
     },
 ]
