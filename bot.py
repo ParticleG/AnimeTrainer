@@ -7,7 +7,7 @@ if __name__ == '__main__':
     nonebot.init(config)
     nonebot.get_bot().logger.setLevel(logging.WARNING)
     nonebot.load_plugins(
-        path.join(path.dirname(__file__), 'AnimeTrainer', 'plugins'),
-        'AnimeTrainer.plugins'
+        path.join(path.dirname(__file__), 'EXplorer', 'plugins'),
+        'EXplorer.plugins'
     )
     nonebot.run()

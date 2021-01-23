@@ -1,6 +1,6 @@
 PATHS = {
-    'CQ_PATH': 'C:\\Public\\AnimeTrainer\\Server\\',
-    'BOT_PATH': 'C:\\Public\\AnimeTrainer\\Bot\\',
+    'CQ_PATH': 'C:\\Public\\EXplorer\\Server\\',
+    'BOT_PATH': 'C:\\Public\\EXplorer\\Bot\\',
     'IMAGE_PATH': 'C:\\SeTuExploreAssociate\\',
 }
 

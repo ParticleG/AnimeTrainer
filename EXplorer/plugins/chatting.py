@@ -1,9 +1,9 @@
 from nonebot import on_command, CommandSession
 from hashlib import md5
 
-from AnimeTrainer.configs import *
-from AnimeTrainer.utils.cq_utils import *
-from AnimeTrainer.utils.cq_parser import *
+from EXplorer.configs import *
+from EXplorer.utils.cq_utils import *
+from EXplorer.utils.cq_parser import *
 
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
-# BOT404
+# EXplorer
 
-A auto video downloader plugin for bot based on CQ and youtube-dlc.
+An exhentai api bot based on CQ.
 
 ## Requirements
 
@@ -11,6 +11,7 @@ pip install -r requirements.txt
 ## Start API-backend
 
 Runtime(Production) environment:
+
 ```
 uvicorn <class-name>:app
 ```
@@ -18,6 +19,7 @@ uvicorn <class-name>:app
 Or hot-edit:
 
 e.g.
+
 ```
 uvicorn web-interface-demo:app --reload
 ```
